@@ -90,11 +90,16 @@
         //  const totalBalance = depositNumber + currentBalanceNumber;
         //  document.getElementById("currentDeposit").innerText = totalBalance;
           
-           updateSpanText("currentDeposit", depositNumber);
+         if(depositNumber < 0){
+          alert("Deposit number cannot be negative");
+          }
+        else{
+          updateSpanText("currentDeposit", depositNumber);
 
           updateSpanText("currentBalance", depositNumber);
-   
+
          document.getElementById("depositAmount").value = "";
+       }
 
          })
 
